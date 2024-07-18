@@ -13,9 +13,11 @@
 ## 기술 스택
 **사용 언어**
 - 코틀린
+  
 **UI 구성 요소**:
   - RecyclerView
   - ScrollView
+    
 **데이터 전달 및 저장**:
   - Intent
   - Parcelize
