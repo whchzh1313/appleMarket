@@ -3,12 +3,14 @@ package com.example.applemarket
 import android.content.Intent
 import android.os.Bundle
 import android.provider.AlarmClock.EXTRA_MESSAGE
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.applemarket.databinding.ActivityDetailBinding
 import com.example.applemarket.databinding.ActivityMainBinding
+import com.google.android.material.snackbar.Snackbar
 import java.text.DecimalFormat
 import kotlin.math.log
 
@@ -44,11 +46,13 @@ class DetailActivity : AppCompatActivity() {
             val data = listData.find { it.idx == detailContent.idx } ?: return@setOnClickListener
             when (data.heart) {
                 true -> {
+                    Snackbar.make(it, "관심 목록에 추가 되 었 습 니다.", Snackbar.LENGTH_SHORT).show()
                     data.heart = false
                     data.like--
                     detailBinding.detailLike.setImageResource(R.drawable.heart_off)
                 }
                 false -> {
+                    Snackbar.make(it, "관심 목록에 추가 되었습니다.", Snackbar.LENGTH_SHORT).show()
                     data.heart = true
                     data.like++
                     detailBinding.detailLike.setImageResource(R.drawable.heart_on)
@@ -56,7 +60,7 @@ class DetailActivity : AppCompatActivity() {
             }
         }
         fun likeChange () {
-            when (listData[detailContent.idx].heart) {
+            when (listData.find { it.idx == detailContent.idx }!!.heart) {
                 true -> {
                     detailBinding.detailLike.setImageResource(R.drawable.heart_on)
                 }

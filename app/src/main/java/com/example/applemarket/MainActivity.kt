@@ -58,6 +58,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         adapter.itemLongClick = object : ListAdapter.ItemLongClick {
+            @SuppressLint("NotifyDataSetChanged")
             override fun onLongClick(view: View, position: Int) {
                 // Toast.makeText(this@MainActivity, "position = $position \n this = $this", Toast.LENGTH_SHORT).show()
 
