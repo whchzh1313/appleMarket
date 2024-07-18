@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/list_inner"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/list_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="116dp"
+        android:text="1,000원"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/list_place"
+        app:layout_constraintTop_toBottomOf="@+id/list_place" />
+
+    <TextView
+        android:id="@+id/list_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="116dp"
+        android:text="서울 서대문구 창천동"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/list_title"
+        app:layout_constraintTop_toBottomOf="@+id/list_title" />
+
+    <ImageView
+        android:id="@+id/list_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/rounded_box"
+        android:clipToOutline="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sample1" />
+
+    <TextView
+        android:id="@+id/list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingStart="116dp"
+        android:text="산진 한달된 선풍기 팝니다ㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏㅏ"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@+id/list_image"
+        app:layout_constraintTop_toTopOf="@+id/list_image" />
+
+    <TextView
+        android:id="@+id/list_like_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="13"
+        app:layout_constraintBottom_toBottomOf="@+id/list_like"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/list_like"
+        app:layout_constraintTop_toTopOf="@+id/list_like" />
+
+    <TextView
+        android:id="@+id/list_chat_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="25"
+        app:layout_constraintBottom_toBottomOf="@+id/list_chat"
+        app:layout_constraintEnd_toStartOf="@+id/list_like"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/list_chat"
+        app:layout_constraintTop_toTopOf="@+id/list_chat" />
+
+    <ImageView
+        android:id="@+id/list_chat"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        app:layout_constraintBottom_toBottomOf="@+id/list_image"
+        app:layout_constraintEnd_toStartOf="@+id/list_chat_num"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/list_image"
+        app:srcCompat="@drawable/chat" />
+
+    <ImageView
+        android:id="@+id/list_like"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/list_chat"
+        app:layout_constraintEnd_toStartOf="@+id/list_like_num"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/list_chat_num"
+        app:layout_constraintTop_toTopOf="@+id/list_chat"
+        app:srcCompat="@drawable/like" />
+</androidx.constraintlayout.widget.ConstraintLayout>
