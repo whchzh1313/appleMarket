@@ -21,3 +21,4 @@
 **데이터 전달 및 저장**:
   - Intent
   - Parcelize
+  - DataClass
